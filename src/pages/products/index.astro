@@ -23,7 +23,7 @@ const product: CollectionEntry<"products">[] = (
 // Define variables for page content
 const title: string = "Products";
 const subTitle: string =
-  "Explore the durability and precision of ScrewFast tools, designed for both professionals and enthusiasts. Each of our products is crafted with precision and built to last, ensuring you have the right tool for every job.";
+  "Explore the innovation and reliability of Samarth Meditech's solutions, designed for healthcare professionals and business leaders. Each of our products is meticulously crafted to ensure durability and precision, providing you with the tools you need for every aspect of healthcare management.";
 
 // Testimonial data that will be rendered in the component
 const testimonials = [
@@ -107,9 +107,9 @@ const pageTitle: string = `Products | ${SITE.title}`;
         product.map((product, index) => {
           const position = index % 4;
           if (position === 0 || position === 3) {
-            return <CardSmall product={product} />;
-          } else {
             return <CardWide product={product} />;
+          } else {
+            return <CardSmall product={product} />;
           }
         })
       }
@@ -117,12 +117,12 @@ const pageTitle: string = `Products | ${SITE.title}`;
   </div>
   <!--Features statistics section-->
   <FeaturesStatsAlt
-    title="Why Choose ScrewFast?"
-    subTitle="Transform your ideas into tangible results with ScrewFast tools. Whether you're starting with a sketch on a napkin or diving into a comprehensive construction project, our tools are engineered to help you build with confidence."
+    title="Why choose our Products?"
+    subTitle="Elevate your healthcare management with Samarth Meditech's advanced solutions. From enhancing patient care to streamlining business processes, our products empower you to achieve excellence effortlessly."
     benefits={[
-      "Robust and reliable tools for long-lasting performance.",
-      "Innovative solutions tailored to modern construction needs.",
-      "Customer support dedicated to your project's success.",
+      "Reliable and robust solutions ensuring long-lasting performance.",
+      "Innovative technology tailored to meet modern healthcare demands.",
+      "Dedicated customer support committed to your success.",
     ]}
   />
   <!--Testimonials section-->
