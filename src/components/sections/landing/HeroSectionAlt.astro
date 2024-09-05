@@ -1,6 +1,7 @@
 ---
 // Import the necessary dependencies
-import GithubBtn from "@components/ui/buttons/GithubBtn.astro";
+// import GithubBtn from "@components/ui/buttons/GithubBtn.astro";
+import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
 // Define props from Astro
 const { title, subTitle, url } = Astro.props;
@@ -117,9 +118,9 @@ interface Props {
     </svg>
   </div>
   <!-- Hero Section Heading -->
-  <div class="mx-auto mt-5 max-w-xl text-center">
+  <div class="mx-auto mt-5 max-w-full text-center whitespace-nowrap">
     <h2
-      class="block text-balance text-4xl font-bold leading-tight tracking-tight text-neutral-800 dark:text-neutral-200 md:text-5xl lg:text-6xl"
+      class="  block text-balance text-4xl font-bold leading-tight tracking-tight text-neutral-800 dark:text-neutral-200 md:text-5xl lg:text-6xl"
     >
       {title}
     </h2>
@@ -138,7 +139,9 @@ interface Props {
   {
     url && (
       <div class="mt-8 flex justify-center gap-3">
-        <GithubBtn url={url} title={btnTitle}/>
+
+      <PrimaryCTA title={btnTitle} url={url} noArrow={true} />
+
       </div>
     )
   }

@@ -9,9 +9,9 @@ import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 // Import necessary images
 import blueprints from "@images/blueprints-image.avif";
 import personWorking from "@images/person-working.avif";
-import beforeAfter from "@images/before-after.avif";
-import constructionWorkers from "@images/construction-workers.avif";
-import aerialView from "@images/aerial-view.avif";
+import customSoftwareDevelopment from "@images/customSoftwareDevelopment.avif";
+import mobileAppDevelopment from "@images/mobileAppDevelopment.avif"
+import appdevelop from "@images/appdevelop.avif";
 import usingTools from "@images/using-tools.avif";
 import progressBuilding from "@images/progress-building.avif";
 import underConstruction from "@images/under-construction.avif";
@@ -36,9 +36,9 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
+    title: "IT Staffing",
     subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
+      "Our IT staffing services provide highly skilled professionals to meet your specific IT needs. We understand that finding the right talent can be challenging, which is why we offer a pool of experts with the necessary skills and experience to support your projects. Whether you require temporary support for a short-term project or long-term staffing solutions to build a robust IT team, our professionals are equipped to handle complex challenges and drive your IT initiatives forward.",
     single: false,
     imgOne: blueprints,
     imgOneAlt: "Blueprints and digital tablet with construction plans.",
@@ -47,40 +47,40 @@ const articles: Article[] = [
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
+    title: "Custom Software Development",
     subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
-    img: beforeAfter,
+      "We specialize in creating tailored software solutions across various industries, addressing specific challenges faced by our clients. Our custom development services ensure that you receive solutions perfectly aligned with your business needs. We start by thoroughly understanding your requirements and objectives, then design and develop software that meets those exact specifications. Our expertise spans a wide range of technologies and industries, allowing us to build scalable, reliable, and secure software solutions. By focusing on customization, we ensure that our solutions enhance productivity, streamline processes, and provide a competitive edge for your business.",
+    img: customSoftwareDevelopment,
     imgAlt: "Construction site before and after",
-    btnExists: true,
-    btnTitle: "Learn More",
+    btnExists: false,
+    btnTitle: "",
     btnURL: "#",
   },
   {
     isRightSection: true,
-    title: "Navigating Projects with Professional Oversight",
+    title: "Mobile Application Development",
     subTitle:
-      "Effective project management is at the heart of any successful build. ScrewFast provides thorough planning and robust management services that keep your project on time and within budget. Let us handle the complexities of workflow coordination, resource allocation, and stakeholder communication while you focus on your vision.",
+      "Increase accessibility and user engagement with our intuitive mobile applications designed for healthcare providers and patients. Our apps enhance interaction and streamline communication between professionals and their patients.",
     single: false,
-    imgOne: constructionWorkers,
+    imgOne: mobileAppDevelopment,
     imgOneAlt: "Construction workers orchestrating a project",
-    imgTwo: aerialView,
+    imgTwo: appdevelop,
     imgTwoAlt: "Aerial view of managed construction",
   },
   {
     isRightSection: false,
-    title: "Ensuring Long-lasting Performance",
+    title: "Healthcare Solutions",
     subTitle:
-      "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
+      "Samarth Meditech offers specialized healthcare solutions that address the unique challenges of the healthcare industry. From patient management systems to electronic health records, our solutions are designed to improve patient care, streamline administrative tasks, and enhance overall efficiency. Our healthcare solutions incorporate advanced security measures to protect patient data and comply with regulatory standards. By leveraging technology, we help healthcare providers optimize their workflows, reduce costs, and deliver better patient outcomes. Our solutions are continuously update ",
     img: usingTools,
     imgAlt:
       "Man in orange and black vest wearing white helmet holding yellow and black power tool",
   },
   {
     isRightSection: true,
-    title: "Crafting Bespoke Strategies for Unique Challenges",
+    title: "Data Analytics and Reporting Tools",
     subTitle:
-      "For our larger enterprise clients, ScrewFast offers custom solutions designed to meet specific industry challenges. By understanding your unique needs, we engineer tailored strategies aimed at optimizing your operations, enhancing efficiency, and driving your business forward.",
+      "Our data analytics and reporting tools enable businesses to make informed decisions, improve operational efficiency, and track performance metrics. By harnessing the power of data, our solutions provide valuable insights that drive strategic initiatives and enhance overall business performance. We offer customizable dashboards and detailed reports that allow you to monitor key metrics, identify trends, and make data-driven decisions. Our analytics tools integrate seamlessly with existing systems, providing real-time data and facilitating proactive management. Whether you're tracking financial performance, operational efficiency, or patient outcomes, our tools provide the insights you need to succeed.",
     single: false,
     imgOne: progressBuilding,
     imgOneAlt: "In progress building structure",
@@ -89,6 +89,15 @@ const articles: Article[] = [
     btnExists: true,
     btnTitle: "Read more",
     btnURL: "#",
+  },
+  {
+    isRightSection: false,
+    title: "Technical Support and Training",
+    subTitle:
+      "We offer comprehensive technical support and training services to ensure the smooth operation of our solutions. Our dedicated support team is available to assist with troubleshooting, resolving issues, and providing ongoing maintenance. We also offer training programs to ensure that your staff is well-equipped to use our solutions effectively. By providing prompt support and thorough training, we help you achieve a seamless transition and uninterrupted operations, allowing you to focus on delivering excellent patient care and running your business efficiently. Our support services are designed to be responsive and proactive, ensuring that potential issues are addressed before they impact your operations.",
+    img: usingTools,
+    imgAlt:
+      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
   },
 ];
 
@@ -115,11 +124,11 @@ const pageTitle: string = `Services | ${SITE.title}`;
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
-    title="Uniting Expertise with Your Vision"
-    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
+    title="Build future-ready web apps with the right technology partner"
+    subTitle="Samarth Meditech is dedicated to transforming healthcare and business operations with innovative and reliable technology solutions. Our tailored services meet the diverse needs of healthcare professionals and business leaders, enhancing efficiency and productivity. By leveraging cutting-edge technology, we empower organizations to streamline processes and deliver personalized experiences. We focus on addressing unique challenges to ensure our clients' long-term success."
     btnExists={true}
     btnTitle="Schedule a Consultation"
-    btnURL="#"
+    btnURL="/contact"
   />
   <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
   They alternate for variety in design.
@@ -160,9 +169,9 @@ const pageTitle: string = `Services | ${SITE.title}`;
   <!--FeaturesStats section showcases essential stats valuable to users-->
   <FeaturesStats
     title="By the Numbers"
-    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At ScrewFast, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
+    subTitle="At Samarth Meditech, we are committed to delivering industry-leading healthcare and technology solutions that drive excellence and innovation. Our dedication to quality and reliability is evident in every project we undertake, ensuring your operations run smoothly and efficiently."
     mainStatTitle="96%"
-    mainStatSubTitle="of our clients rate their experience with ScrewFast as exceptional"
+    mainStatSubTitle="of our clients rate their experience with Samarth Meditech as exceptional"
     stats={[
       {
         stat: "99.8%",
