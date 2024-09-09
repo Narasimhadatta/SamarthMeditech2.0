@@ -30,7 +30,8 @@ const mostRecentPost: CollectionEntry<"blog"> = blogPosts[0];
 const otherPosts: CollectionEntry<"blog">[] = blogPosts.slice(1);
 
 // Define variables for page content
-const title: string = "Your Gateway to Construction Excellence";
+
+const title: string = "Your Portal to Innovation and Success";
 const subTitle: string =
   "Explore the latest news, tips, and insights from Samarth Meditech to elevate your healthcare and business operations. From software innovations to industry best practices, our blog is your go-to resource for all things healthcare technology and business management. Stay informed and stay ahead with expert advice and updates tailored to your needs.";
 const secondTitle: string = "Insights";
@@ -88,12 +89,12 @@ const pageTitle: string = `Blog | ${SITE.title}`;
     </div>
   </section>
   <!--Most recent blog post-->
-  <section
+  <!-- <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
     <CardBlogRecent blogEntry={mostRecentPost} />
-  </section>
-  <!--Insights section-->
+  </section> -->
+  <!-- Insights section
   <section
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
@@ -114,5 +115,5 @@ const pageTitle: string = `Blog | ${SITE.title}`;
         ))
       }
     </div>
-  </section>
+  </section> -->
 </MainLayout>
