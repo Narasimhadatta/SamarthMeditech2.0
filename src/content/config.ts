@@ -14,48 +14,63 @@ const productsCollection = defineCollection({
       imgCard: image(),
       imgMain: image(),
       imgAlt: z.string(),
+      backgroundText: z.string(),
+      
+
     }),
-    tabs: z.array(
-      z.object({
-        id: z.string(),
-        dataTab: z.string(),
-        title: z.string(),
-      })
-    ),
-    longDescription: z.object({
-      title: z.string(),
-      subTitle: z.string(),
-      btnTitle: z.string(),
-      btnURL: z.string(),
+    features:z.object({
+      feature1 : z.string(),
+      feat1title: z.string(),
+      feature2 : z.string(),
+      feat2title: z.string(),
+      feature3 : z.string(),
+      feat3title: z.string(),
+      imgft1:image(),
+      imgft2:image(),
+      imgft3:image(),
+
     }),
-    descriptionList: z.array(
-      z.object({
-        title: z.string(),
-        subTitle: z.string(),
-      })
-    ),
-    specificationsLeft: z.array(
-      z.object({
-        title: z.string(),
-        subTitle: z.string(),
-      })
-    ),
-    specificationsRight: z.array(
-      z.object({
-        title: z.string(),
-        subTitle: z.string(),
-      })
-    ).optional(),
-    tableData: z.array(
-      z.object({
-        feature: z.array(z.string()),
-        description: z.array(z.array(z.string())),
-      })
-    ).optional(),
-    blueprints: z.object({
-      first: image().optional(),
-      second: image().optional(),
-    }),
+    // tabs: z.array(
+    //   z.object({
+    //     id: z.string(),
+    //     dataTab: z.string(),
+    //     title: z.string(),
+    //   })
+    // ),
+    // longDescription: z.object({
+    //   title: z.string(),
+    //   subTitle: z.string(),
+    //   btnTitle: z.string(),
+    //   btnURL: z.string(),
+    // }),
+    // descriptionList: z.array(
+    //   z.object({
+    //     title: z.string(),
+    //     subTitle: z.string(),
+    //   })
+    // ),
+    // specificationsLeft: z.array(
+    //   z.object({
+    //     title: z.string(),
+    //     subTitle: z.string(),
+    //   })
+    // ),
+    // specificationsRight: z.array(
+    //   z.object({
+    //     title: z.string(),
+    //     subTitle: z.string(),
+    //   })
+    // ).optional(),
+    // tableData: z.array(
+    //   z.object({
+    //     feature: z.array(z.string()),
+    //     description: z.array(z.array(z.string())),
+    //   })
+    // ).optional(),
+    // blueprints: z.object({
+    //   first: image().optional(),
+    //   second: image().optional(),
+    // }),
   }),
 });
 

@@ -6,6 +6,7 @@ import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { SITE } from "@data/constants";
+import Ayuci from "@/components/Product/Ayuci.astro";
 
 // Global declaration for gsap animation library
 declare global {
@@ -26,8 +27,8 @@ const { product } = Astro.props;
 
 const pageTitle: string = `${product.data.title} | ${SITE.title}`;
 ---
-
 <MainLayout title={pageTitle}>
+  
   <div id="overlay" class="fixed inset-0 bg-neutral-200 dark:bg-neutral-800">
   </div>
 
@@ -46,20 +47,30 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
       class="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0"
     >
       <div id="fadeInUp">
-        <h1
-          class="block text-4xl font-bold tracking-tighter text-neutral-800 dark:text-neutral-200 sm:text-5xl md:text-6xl lg:text-7xl"
+        <!-- <h1
+          class="block text-4xl font-bold tracking-tighter text-blue1 dark:text-neutral-200 sm:text-5xl md:text-6xl lg:text-7xl"
         >
+        
           {product.data.title}
-        </h1>
+        </h1> -->
+        <div class="product-title font-bold tracking-tighter sm:text-5xl md:text-6xl">
+          {product.data.title}
+
+        </div>
         <p class="text-lg text-neutral-600 dark:text-neutral-400">
           {product.data.description}
         </p>
       </div>
       <div>
+          <!-- <div>
+              <video autoplay loop playsinline muted >
+                <source src={product.data.main.vidMain} type="video/mp4">
+            </video>
+          </div> -->
         <Image
           id="fadeInMoveRight"
           src={product.data.main.imgMain}
-          class="w-[600px]"
+          class="w-[800px] h-[500px]"
           alt={product.data.main.imgAlt}
           format={"avif"}
           loading={"eager"}
@@ -67,8 +78,81 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
       </div>
     </div>
   </section>
+  <section class="bg-section">
+    <div class="subtitle">
+      BACKGROUND
+    </div>
+    <p class="background-text">
+      {product.data.main.backgroundText}
+    </p>
 
-  <div class="mx-auto max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14">
+  </section>
+
+
+  <section>
+      <div class="bg-section">
+        <div class="title font-bold sm:text-15xl md:text-6xl lg:text-7xl">FEATURES IMPLEMENTED</div>
+      </div>
+      <div>
+        <div class="feature-title">{product.data.features.feat1title}</div>
+        <p class="features">
+          
+          {product.data.features.feature1}
+        </p>
+        <div class="img-size">
+          <Image
+          id="fadeInMoveRight"
+          src={product.data.features.imgft1}
+          class="img-size"
+          alt={product.data.main.imgAlt}
+          format={"png"}
+          loading={"eager"}
+        />
+        </div>
+      </div>
+      <div class="feature-title">{product.data.features.feat2title}</div>
+
+      <p class="features">
+        {product.data.features.feature2}
+
+      </p>
+      <div class="img-size">
+        <Image
+        id="fadeInMoveRight"
+        src={product.data.features.imgft2}
+        class="img-size"
+        alt={product.data.main.imgAlt}
+        format={"png"}
+        loading={"eager"}
+      />
+      </div>
+      <div class="feature-title">{product.data.features.feat3title}</div>
+
+      <p class="features">
+        {product.data.features.feature3}
+
+      </p>
+      <div class="img-size">
+        <Image
+        id="fadeInMoveRight"
+        src={product.data.features.imgft3}
+        class="img-size"
+        alt={product.data.main.imgAlt}
+        format={"png"}
+        loading={"eager"}
+      />
+      </div>
+      
+  </section>
+<section>
+  <div class="bg-section">
+    <div class="title">TECHNICAL ASPECTS</div>
+    <p>
+
+    </p>
+  </div>
+</section>
+  <!-- <div class="mx-auto max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14">
     <nav
       class="mx-auto grid max-w-6xl gap-y-px sm:flex sm:gap-x-4 sm:gap-y-0"
       aria-label="Tabs"
@@ -241,9 +325,83 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
         }
       </div>
     </div>
-  </div>
+  </div> -->
 </MainLayout>
+<style>
+  .product-title{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 7rem;
+      color:rgb(1, 1, 110);
+  }
+  .intro-video{    
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+           
+            padding-right: 15px;
+            object-fit: fill;
+        }
 
+    .background-text{
+      font-size: 1.25rem;
+      color: rgb(49, 57, 63);
+      font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+      max-width: 85rem;
+      grid-column: 2/3;
+      padding-top: 25px;
+      padding: 8px;
+      font-weight: 300;
+    }
+    .bg-section{
+      display: grid;
+      grid-template-columns: 1fr  40fr 1fr;
+      grid-row:auto;
+    }
+    .subtitle{
+      font-style: bold;
+      color: rgb(34, 34, 43);
+      font-size: 1.25rem;
+      grid-column: 2/3;
+      font-family: "GothamBold",-apple-system,BlinkMacSystemFont,Verdana,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;;
+      padding-left: 0.5%;
+    }
+    .feature-title{
+      font-style:bold;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+    padding-left: 3%;
+    font-size: 1.25rem;
+    padding-top: 1.5%;
+      padding-bottom: 1%;
+    }
+    .img-size{
+      height: auto;
+      width: auto;
+      border-color: green;
+      border-radius: 5px;
+      padding: 25px;
+    }
+   .title{
+    /* font-size:3rem; */
+    width:max-content;
+    padding-left: 7%;
+    color:rgb(1, 1, 110);
+    padding-top: 25px;
+    padding-bottom: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+
+   }
+   .features{
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+    max-width: 85rem;
+    font-weight: 300;
+    padding-left: 3%;
+    font-size: 1.25rem;
+    color: rgb(49, 57, 63);
+   }
+   
+</style>
 <script>
   import { gsap } from "gsap";
 
