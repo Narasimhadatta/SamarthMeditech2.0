@@ -28,7 +28,7 @@ const productsCollection = defineCollection({
       imgft1:image(),
       imgft2:image(),
       imgft3:image(),
-
+      technicalAspects:z.string(),
     }),
     // tabs: z.array(
     //   z.object({

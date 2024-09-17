@@ -53,11 +53,11 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
         
           {product.data.title}
         </h1> -->
-        <div class="product-title font-bold tracking-tighter sm:text-5xl md:text-6xl">
+        <div class="product-title font-bold tracking-tighter sm:text-5xl md:text-6xl ">
           {product.data.title}
 
         </div>
-        <p class="text-lg text-neutral-600 dark:text-neutral-400">
+        <p class="text-lg text-neutral-600 dark:text-neutral-400 dark:bg-neutral-800">
           {product.data.description}
         </p>
       </div>
@@ -70,7 +70,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
         <Image
           id="fadeInMoveRight"
           src={product.data.main.imgMain}
-          class="w-[800px] h-[500px]"
+          class="w-[800px] h-[400px]"
           alt={product.data.main.imgAlt}
           format={"avif"}
           loading={"eager"}
@@ -82,7 +82,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
     <div class="subtitle">
       BACKGROUND
     </div>
-    <p class="background-text">
+    <p class="background-text dark:bg-neutral-800">
       {product.data.main.backgroundText}
     </p>
 
@@ -145,10 +145,10 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
       
   </section>
 <section>
-  <div class="bg-section">
-    <div class="title">TECHNICAL ASPECTS</div>
-    <p>
-
+  <div>
+    <div class="title font-bold sm:text-15xl md:text-6xl lg:text-7xl dark:text-blue-400">TECHNICAL ASPECTS</div>
+    <p class="background-text dark:bg-neutral-800">
+     {product.data.features.technicalAspects}
     </p>
   </div>
 </section>
@@ -383,7 +383,8 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
       padding: 25px;
     }
    .title{
-    /* font-size:3rem; */
+    
+    font-size:3rem;
     width:max-content;
     padding-left: 7%;
     color:rgb(1, 1, 110);

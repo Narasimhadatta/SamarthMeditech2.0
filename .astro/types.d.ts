@@ -478,20 +478,6 @@ declare module 'astro:content' {
   collection: "products";
   data: InferEntrySchema<"products">
 } & { render(): Render[".md"] };
-"b203.md": {
-	id: "b203.md";
-  slug: "b203";
-  body: string;
-  collection: "products";
-  data: InferEntrySchema<"products">
-} & { render(): Render[".md"] };
-"f303.md": {
-	id: "f303.md";
-  slug: "f303";
-  body: string;
-  collection: "products";
-  data: InferEntrySchema<"products">
-} & { render(): Render[".md"] };
 "t845.md": {
 	id: "t845.md";
   slug: "t845";
