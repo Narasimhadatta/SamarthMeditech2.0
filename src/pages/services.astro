@@ -7,6 +7,9 @@ import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 
 // Import necessary images
+import business from "@images/business.jpg"
+import reporting from "@images/reporting.jpg"
+import analytics from "@images/analytics.jpg"
 import blueprints from "@images/blueprints-image.avif";
 import personWorking from "@images/person-working.avif";
 import customSoftwareDevelopment from "@images/customSoftwareDevelopment.avif";
@@ -15,6 +18,7 @@ import appdevelop from "@images/appdevelop.avif";
 import usingTools from "@images/using-tools.avif";
 import progressBuilding from "@images/progress-building.avif";
 import underConstruction from "@images/under-construction.avif";
+import technicalSupport from "@images/technicalSupport.jpg"
 import { SITE } from "@data/constants";
 
 interface Article {
@@ -69,12 +73,12 @@ const articles: Article[] = [
   },
   {
     isRightSection: false,
-    title: "Healthcare Solutions",
+    title: "Business Solutions",
     subTitle:
-      "Samarth Meditech offers specialized healthcare solutions that address the unique challenges of the healthcare industry. From patient management systems to electronic health records, our solutions are designed to improve patient care, streamline administrative tasks, and enhance overall efficiency. Our healthcare solutions incorporate advanced security measures to protect patient data and comply with regulatory standards. By leveraging technology, we help healthcare providers optimize their workflows, reduce costs, and deliver better patient outcomes. Our solutions are continuously update ",
-    img: usingTools,
+    "Our comprehensive business solutions are designed to meet the unique needs of organizations across various industries. From streamlining operations to enhancing productivity, our innovative technology solutions provide businesses with the tools they need to thrive in a competitive marketplace. Whether it's custom software development, management systems, or data analytics, our services are tailored to address your specific challenges. With user-friendly interfaces, seamless integration capabilities, and scalable options, our solutions ensure that your operations run efficiently while driving sustainable growth and success.",
+    img: business,
     imgAlt:
-      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
+      "Man in orange and blac+k vest wearing white helmet holding yellow and black power tool",
   },
   {
     isRightSection: true,
@@ -82,9 +86,9 @@ const articles: Article[] = [
     subTitle:
       "Our data analytics and reporting tools enable businesses to make informed decisions, improve operational efficiency, and track performance metrics. By harnessing the power of data, our solutions provide valuable insights that drive strategic initiatives and enhance overall business performance. We offer customizable dashboards and detailed reports that allow you to monitor key metrics, identify trends, and make data-driven decisions. Our analytics tools integrate seamlessly with existing systems, providing real-time data and facilitating proactive management. Whether you're tracking financial performance, operational efficiency, or patient outcomes, our tools provide the insights you need to succeed.",
     single: false,
-    imgOne: progressBuilding,
+    imgOne: reporting,
     imgOneAlt: "In progress building structure",
-    imgTwo: underConstruction,
+    imgTwo: analytics,
     imgTwoAlt: "Brown and gray building under construction",
     btnExists: true,
     btnTitle: "Read more",
@@ -95,7 +99,7 @@ const articles: Article[] = [
     title: "Technical Support and Training",
     subTitle:
       "We offer comprehensive technical support and training services to ensure the smooth operation of our solutions. Our dedicated support team is available to assist with troubleshooting, resolving issues, and providing ongoing maintenance. We also offer training programs to ensure that your staff is well-equipped to use our solutions effectively. By providing prompt support and thorough training, we help you achieve a seamless transition and uninterrupted operations, allowing you to focus on delivering excellent patient care and running your business efficiently. Our support services are designed to be responsive and proactive, ensuring that potential issues are addressed before they impact your operations.",
-    img: usingTools,
+    img: technicalSupport,
     imgAlt:
       "Man in orange and black vest wearing white helmet holding yellow and black power tool",
   },
